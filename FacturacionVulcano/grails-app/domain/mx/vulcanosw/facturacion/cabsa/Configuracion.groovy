@@ -5,7 +5,7 @@ class Configuracion {
 	String nombre
 	String llave
 	String certificado
-	String contrasena //temporal, hay que encriptarlo para la siguente versión
+	String contrasena //temporal, hay que encriptarlo para la siguente versión s
 
 
 	static mapping = {
