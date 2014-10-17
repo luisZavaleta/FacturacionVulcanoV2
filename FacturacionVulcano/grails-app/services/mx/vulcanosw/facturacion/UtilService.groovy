@@ -1,5 +1,7 @@
 package mx.vulcanosw.facturacion
 
+import java.text.DecimalFormat
+
 import mx.vulcanosw.vo.Moneda
 
 
@@ -54,19 +56,23 @@ class UtilService {
 
 
 
-	def toMoney(String cantidad){
+	def toMoney(Double cantidad){
 
 
-		println(cantidad)
+
 		Moneda moneda = new Moneda()
 
 		if(cantidad != null){
 
+
+			DecimalFormat df = new DecimalFormat();
+			df.setMaximumFractionDigits(2);
+			df.setMinimumFractionDigits(2);
+			df.setGroupingUsed(false);
+
 			moneda.cantidad = cantidad.toBigDecimal()
-
-			def cantidadSplit = cantidad.split("\\.")
-			println(cantidadSplit)
-
+			def cantidadWithFormat = df.format(cantidad)
+			def cantidadSplit = cantidadWithFormat.split("\\,")
 
 			def letras = numeroALetraService.letra(cantidadSplit[0]?.toInteger())
 			moneda.letra = letras[0].toUpperCase() + letras.substring(1)
@@ -80,7 +86,11 @@ class UtilService {
 	}
 
 
+	def toMoney(String cantidad){
 
+		Double cant = cantidad?.toDouble()
 
-
+		Moneda moneda =  this.toMoney(cant)
+		return moneda
+	}
 }

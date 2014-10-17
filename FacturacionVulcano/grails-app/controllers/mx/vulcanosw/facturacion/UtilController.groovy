@@ -10,7 +10,7 @@ class UtilController {
 
 
 	def letra() {
-		def cantidad = params.id
+		def cantidad = params.double('id')
 
 
 		Moneda moneda = utilService.toMoney(cantidad)
