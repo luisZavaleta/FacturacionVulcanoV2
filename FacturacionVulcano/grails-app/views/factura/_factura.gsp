@@ -353,15 +353,19 @@ table tr.active  td,table tr td.active {
 }
 
 .pedido {
-	left: 423px;
+	left: 420px;
 	top: 127px;
+	width: 179px;
+	text-align: center;
+	
 }
 
 .entrega {
-	left: 422px;
+	left: 420px;
 	top: 159px;
-	width: 177px;
-
+	width: 179px;
+	text-align: center;
+	
 }
 
 .fechaExpedicion {
@@ -372,9 +376,7 @@ table tr.active  td,table tr td.active {
 .condicionPago {
 	left: 605px;
 	top: 159px;
-	
 	width: 107px;
-
 }
 
 .importeLetra {
@@ -436,8 +438,11 @@ table tr.active  td,table tr td.active {
 }
 
 .formaPago {
-	left: 9px;
+	left: 7px;
 	top: 863px;
+	width:146px;
+	text-align: center;
+	
 }
 
 .noCuenta {
@@ -456,24 +461,36 @@ table tr.active  td,table tr td.active {
 }
 
 .rfcEmisor {
-	left: 200px;
-	top: 897px;;
+	left: 192px;
+	top: 897px;
+	width:126px;
+	text-align: center;
+
 }
 
 .telefono {
-	left: 330px;
+	left: 324px;
 	top: 897px;
+	width:125px;
+	text-align: center;
+
 }
 
 .correo {
-	left: 452px;
+	left: 453px;
 	top: 897px;
+	width:126px;
 	font-size: 9.5px;
+	text-align: center;
+
 }
 
 .web {
 	left: 585px;
 	top: 897px;
+	width:126px;
+	text-align: center;
+
 }
 
 .exibicionOParcialidades {
@@ -562,16 +579,13 @@ table tr.active  td,table tr td.active {
 			${data.importeLetra}
 		</div>
 		<div class="subtotal">
-			<g:formatNumber number="${(data.subtotal)?.toBigDecimal()}"
-				format="\$ ###,###.00" />
+			<g:formatNumber number="${(data.subtotal)?.toBigDecimal()}" format="\$ ###,###.00" />
 		</div>
 		<div class="iva">
-			<g:formatNumber number="${(data.iva)?.toBigDecimal()}"
-				format="\$ ###,###.00" />
+			<g:formatNumber number="${(data.iva)?.toBigDecimal()}" format="\$ ###,###.00" />
 		</div>
 		<div class="total">
-			<g:formatNumber number="${(data.total)?.toBigDecimal()}"
-				format="\$ ###,###.00" />
+			<g:formatNumber number="${(data.total)?.toBigDecimal()}" format="\$ ###,###.00" />
 		</div>
 		<div class="leyendaPagaremos">
 			${ data.leyendaPagaremos}
@@ -642,12 +656,10 @@ table tr.active  td,table tr td.active {
 								${it.unidad}
 							</td>
 							<td class="unitario">
-								<g:formatNumber number="${(it.unitario)?.toBigDecimal()}"
-									format="###,###.00" />
+								<g:formatNumber number="${(it.unitario)?.toBigDecimal()}" format="###,###.00" />
 							</td>
 							<td class="importe  no-border-right">
-								<g:formatNumber number="${(it.importe)?.toBigDecimal()}"
-									format="###,###.00" />
+								<g:formatNumber number="${(it.importe)?.toBigDecimal()}" format="###,###.00" />
 							</td>
 						</tr>
 					</g:each>
