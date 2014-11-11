@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	overrideJQueryHtmlHardTrim()
 
-	// testValidacion()<td class="codigo">
+	// testValidacion()<td class="codigo"> 
 	generarFactura()
 
 	mutuallyExclusiveAcordionButton(".p-clientes", ".panel-body .accordion-header button")

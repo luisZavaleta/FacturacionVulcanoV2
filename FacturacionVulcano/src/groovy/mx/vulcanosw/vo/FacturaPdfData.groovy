@@ -78,9 +78,9 @@ class FacturaPdfData {
 
 		def noctax = comprobante.attribute("NumCtaPago")
 
-		if(noctax.isInteger()){
+		//if(noctax.isInteger()){
 			this.noCuenta = comprobante.attribute("NumCtaPago")
-		}
+		//}
 
 
 		this.domicilio = getDomicilio(domicilioFiscal)

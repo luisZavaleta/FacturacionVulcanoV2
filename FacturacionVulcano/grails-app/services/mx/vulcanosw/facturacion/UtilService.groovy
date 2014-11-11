@@ -1,6 +1,7 @@
 package mx.vulcanosw.facturacion
 
 import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
 
 import mx.vulcanosw.vo.Moneda
 
@@ -66,13 +67,18 @@ class UtilService {
 
 
 			DecimalFormat df = new DecimalFormat();
+			DecimalFormatSymbols decimalsymbols = new DecimalFormatSymbols();
+
+
+			decimalsymbols.setDecimalSeparator((char)'.')
+			df.setDecimalFormatSymbols(decimalsymbols)
 			df.setMaximumFractionDigits(2);
 			df.setMinimumFractionDigits(2);
 			df.setGroupingUsed(false);
 
 			moneda.cantidad = cantidad.toBigDecimal()
 			def cantidadWithFormat = df.format(cantidad)
-			def cantidadSplit = cantidadWithFormat.split("\\,")
+			def cantidadSplit = cantidadWithFormat.split("\\.")
 
 			def letras = numeroALetraService.letra(cantidadSplit[0]?.toInteger())
 			moneda.letra = letras[0].toUpperCase() + letras.substring(1)

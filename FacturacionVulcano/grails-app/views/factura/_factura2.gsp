@@ -10,7 +10,6 @@
 }
 
 
-
 html {
 	font-family: sans-serif; /*27*/
 	font-size: 62.5%; /*259*/
@@ -355,14 +354,17 @@ table tr.active  td,table tr td.active {
 }
 
 .pedido {
-	left: 423px;
+	left: 420px;
 	top: 127px;
+	width: 179px;
+	text-align: center;
 }
 
 .entrega {
-left: 422px;
+	left: 420px;
 	top: 159px;
-	width: 177px;
+	width: 179px;
+	text-align: center;
 
 }
 
@@ -374,7 +376,6 @@ left: 422px;
 .condicionPago {
 	left: 605px;
 	top: 159px;
-	
 	width: 107px;
 }
 
@@ -437,13 +438,17 @@ left: 422px;
 }
 
 .formaPago {
-	left: 9px;
+	left: 7px;
 	top: 863px;
+	width:146px;
+	text-align: center;
 }
 
 .noCuenta {
-	left: 50px;
+	left: 5px;
 	top: 894px;
+	width:150px;
+	text-align: center;
 }
 
 .domicilio {
@@ -457,24 +462,32 @@ left: 422px;
 }
 
 .rfcEmisor {
-	left: 200px;
-	top: 897px;;
+	left: 192px;
+	top: 897px;
+	width:126px;
+	text-align: center;
 }
 
 .telefono {
-	left: 330px;
+	left: 324px;
 	top: 897px;
+	width:125px;
+	text-align: center;
 }
 
 .correo {
-	left: 452px;
+	left: 453px;
 	top: 897px;
+	width:126px;
 	font-size: 9.5px;
+	text-align: center;
 }
 
 .web {
 	left: 585px;
 	top: 897px;
+	width:126px;
+	text-align: center;
 }
 
 .exibicionOParcialidades {

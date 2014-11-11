@@ -446,8 +446,10 @@ table tr.active  td,table tr td.active {
 }
 
 .noCuenta {
-	left: 50px;
+	left: 5px;
 	top: 894px;
+	width:150px;
+	text-align: center;
 }
 
 .domicilio {

@@ -37,7 +37,7 @@ class FacturaService {
 		if((json.moneda).equals("MXN")){
 			comp.moneda = "MXN"
 			comp.tipoCambio = 1
-//MXN
+			//MXN
 		}else{
 			comp.moneda = json.moneda
 			comp.tipoCambio = json.tipoCambio
@@ -49,6 +49,8 @@ class FacturaService {
 
 		if(json.numCtaPago?.isNumber()){
 			comp.numCtaPago = json.numCtaPago?.toInteger()
+		}else{
+			comp.numCtaPago = json.numCtaPago
 		}
 
 		comp.tipoDeComprobante = "ingreso" //fijo, por que para facturas siempre es ingresos

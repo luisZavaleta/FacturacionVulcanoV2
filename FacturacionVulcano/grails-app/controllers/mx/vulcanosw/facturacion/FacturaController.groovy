@@ -206,8 +206,6 @@ class FacturaController {
 
 			if(elementospaguno?.toInteger() > 1){
 
-
-
 				def modelNota = [fondo:imagenFondo, fondo2:imagenFondo2, data : facturaPdfData,  maxrows: elementospaguno?.toInteger()]
 
 				pdfFactura =  filePdf.withOutputStream { outputStream ->

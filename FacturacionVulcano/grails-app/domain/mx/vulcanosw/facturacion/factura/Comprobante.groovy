@@ -111,9 +111,9 @@ class Comprobante {
 
 		if(this.numCtaPago != null && this.numCtaPago != 0) {
 			attributes.put("NumCtaPago",this.numCtaPago)
-		}else{
+		}/*else{
 			attributes.put("NumCtaPago","No Aplica")
-		}
+		}*/
 
 		return attributes
 	}
