@@ -11,6 +11,9 @@ import org.codehaus.groovy.grails.web.json.JSONObject
 class FacturaPdfData {
 
 
+	boolean smallSellosDigital = false;
+
+
 	UtilService utilService = new UtilService()
 	SoapService soapService = new SoapService()
 
@@ -109,7 +112,7 @@ class FacturaPdfData {
 		/** FILLED WITH PARAMETER**/
 		//this.codigoBidimencional = "nana"
 
-		/**HARDCODED TEXT (Ain't change unless the SAT change his requirements)**/
+		/**HARDCODED TEXT (Ain't change unless the SAT change its requirements)**/
 
 		this.leyendaReprecentacionImpresa = "ESTE DOCUMENTO ES UNA REPRESENTACIÓN IMPRESA DE UN CFDI"
 
@@ -171,16 +174,29 @@ class FacturaPdfData {
 
 
 	def getSelloDigitalEmisor(){
-		return addSomeShitEveryNChar(selloDigitalEmisor,95)
+		if(smallSellosDigital){
+			return addSomeShitEveryNChar(selloDigitalEmisor,95)
+		}else{
+			return addSomeShitEveryNChar(selloDigitalEmisor,120) // sello digital grande
+		}
 	}
 
 	def getSelloDigitalSat(){
+
+		if(smallSellosDigital){
 		return addSomeShitEveryNChar(selloDigitalSat,95)
+		}else{
+		return addSomeShitEveryNChar(selloDigitalSat,120) // sello digital grande
+		}
 	}
 
 	def getCadenaOriginal(){
 		println(cadenaOriginal)
-		return addSomeShitEveryNChar(cadenaOriginal,95)
+		if(smallSellosDigital){
+			return addSomeShitEveryNChar(cadenaOriginal,95)
+		}else{
+			return addSomeShitEveryNChar(cadenaOriginal,120) // sello digital grande
+		}
 	}
 
 

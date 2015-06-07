@@ -422,19 +422,23 @@ table tr.active  td,table tr td.active {
 .selloDigitalEmisor {
 	left: 150px;
 	top: 658px;
-	font-size: 9.5px;
+	font-size: 7.5px;  /* sello digital grande */
+	
 }
 
 .selloDigitalSat {
 	left: 150px;
 	top: 703px;
-	font-size: 9.5px;
+	font-size: 7.5px; /* sello digital grande */
+	
+	
 }
 
 .cadenaOriginal {
 	left: 150px;
 	top: 750px;
-	font-size: 9.5px;
+	font-size: 7.5px; /* sello digital grande */
+	
 }
 
 .formaPago {
